@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Blake Drost">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> McNeese Bookstore Home Page </title>
+        <style>
+            #HeaderItems{
+                padding-right: 5px;
+                padding-left: 5px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                height: 60px;
+                width:99%;
+                border: blue;
+                border-style: solid;
+                border-width: thick;
+            }
+            .HeaderItem{
+                display: inline-block;
+                overflow:visible;
+            }
+            #HomePageLinkContainer{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width:23%;
+            }
+            #SearchBarContainer{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width:38%;
+                height:100%;
+            }
+            #SearchBar{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                height:60%;
+                width:70%;
+		font-size:17px;
+            }
+            #SearchButton{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                height:66%;
+                width:20%;
+		background:green;
+		color: white;
+            }
+            #CartContainer{
+                align-items: center;
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width:7%;
+                height:auto;
+            }
+            #LoginContainer{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width:10%;
+            }
+            #LoginLink{                
+                width:auto;
+            }
+            .HeaderPicture{
+                vertical-align: middle;
+                width: 100%;
+                height:100%;
+                max-height: 120px;
+            }
+            #FooterContainer{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                height: 120px;
+                width:100%;
+            }
+            .FooterItems{
+                display: inline-block;
+                align-items: center;
+            }
+            #LeftItem{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width: 20%;
+            }
+            #MiddleItem{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width: 40%;
+            }
+            #RightItem{
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width: 20%;
+            }
+            .fa{
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+                text-decoration: none;
+            }
+            .fa:hover {
+                opacity: 0.7;
+            }
+            
+	.navbar {
+  		width: 100.5%;
+  		background-color: #006DB0;
+  		overflow: auto;
+  		Height: 55px;
+}
+/* Navbar links */
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 2px 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Navbar links on mouse-hover */
+.navbar a:hover {
+  background-color: #00008F;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+     
+
+            .mainDisplayContainer{
+                display: inline;
+            }
+            .filterContainer{
+                float: left;
+                height: 100%;
+                width: 18%;
+                padding-right: 1%;
+                padding-left: 1%;
+            }
+            .gridContainer{
+                height: 100%;
+                width: 70%;
+                margin: 10px 0 0 0;
+                overflow: hidden;
+            }
+            .gridItem{
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+                height: 250px;
+                width: 250px;
+                padding: auto;
+                border:black;
+                border-style: solid;
+                border-width: medium;
+            }
+            #clear{
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Header Section-->
+<div class="navbar">
+  
+
+<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+<a href="about.html"><i class="fa fa-fw fa-map"></i> About</a>
+
+<a class="active" href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+
+</div>
+
+        <div name="HeaderItems" id="HeaderItems">
+            <div name="HomePageLinkContainer" id="HomePageLinkContainer" class="HeaderItem">
+                <a name="HomePageLink" id="HomeLink" href="Home.html">
+                    <img src="McNeeseBookstore.png" class="HeaderPicture">
+                </a>
+            </div>
+            <div name="SearchBarContainer" id="SearchBarContainer" class="HeaderItem">
+	<input type="text" placeholder="Search Something of Your Choice" name="SearchBar" id="SearchBar">
+                
+                <button name="SearchButton" id="SearchButton">
+                    Search
+                </button>
+            </div>
+            <div name="CartContainer" id="CartContainer" class="HeaderItem">
+                <a name="CartLink" id="CartLink" href="Checkout.html">
+                    <img src="Cart.png" class="HeaderPicture">
+                </a>
+            </div>
+            <div name="LoginContainer" id="LoginContainer" class="HeaderItem">
+                <a name="LoginLink" id="LoginLink" href="Login.html">
+                    <p style="font-size:20px;">Login</p>
+                </a>
+            </div>
+        </div>
+        <!--Body Section-->
+        <div name="Main" id="Main" class="mainDisplayContainer">
+            <div name="Filters" id="Filters" class="filterContainer">
+<p><img src="filter.jpg" alt="Girl in a jacket" style="width:30px;height:20px;">
+                <b>Filters</b></p><hr>
+                <ul><b>Subject</b><br>
+                    <input type="checkbox">MATH<br>
+                    <input type="checkbox">CSCI<br>
+                    <input type="checkbox">ENGR<br>
+                    <input type="checkbox">HIST<br>
+                    <input type="checkbox">ENGL<br>
+                    <input type="checkbox">CHEM<br>
+                </ul><hr>
+                <ul><b>Price</b><br>
+                    <input type="checkbox">under 25$<br>
+                    <input type="checkbox">25$-50$<br>
+                    <input type="checkbox">50$-75$<br>
+                    <input type="checkbox">75$-100$<br>
+                    <input type="checkbox">above 100$<br>
+                </ul><hr>
+                <ul><b>Type</b><br>
+                    <input type="checkbox">Hardcover<br>
+                    <input type="checkbox">Paperback<br>
+                </ul><hr>
+                <ul>
+                    <input type="checkbox">In Stock<br>
+                </ul>
+            </div>
+            <div name="Display" id="Display" class="gridContainer">
+                <div id="item1" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item2" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item3" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item4" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item5" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item6" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item7" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item8" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+                <div id="item9" class="gridItem">Title:<br>Price:<br>In-stock:</div>
+            </div>
+            <div id="clear"></div>
+        </div>
+    </body>
+
+    <!--AUTHOR:AMAN KHAN FOOTER-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+
+	
+	
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+</head>
+	<body>
+		
+		<!-- The content of your page would go here. -->
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="McNeeseBookstore.png"style="width:300px;height:100px;">
+				<h3>About<span>McNeese Bookstore</span></h3>
+
+				<p class="footer-links">
+					<a href="home.html">Home</a>
+					|
+					<a href="about.html">About</a>
+					|
+			
+					<a href="contact.html">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2021 McNeese Bookstore Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>807 Walters Street</span>
+						Lake Charles, LA - 76007</p>
+				</div>
+
+				
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">mcneesebookstore@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer a platform to browse and purchase course books, office materials and clothings  at McNeese State University</p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/McNeeseStateU/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/McNeese?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/mcneese/?hl=en"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/school/mcneese-state-university/mycompany/"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.youtube.com/channel/UCN5RmimWLJQNBf-SCQpQoCg"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+<style>
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 20%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 5px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+	height:6px;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  yellow;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+</style>
+
+
+    </footer>
+</html>
+
+
+<!--Author: Aman Khan/STICKY SOCIAL MEDIA ICONS-->
+<div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="fb.png" width="32" height="32">
+            <p><a href="https://www.facebook.com/McNeeseStateU/" target="_blank">Like Us on<br>Facebook</a></p>
+        </li>
+        <li>
+            <img src="tw.png" width="32" height="32">
+            <p><a href="https://twitter.com/McNeese?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Follow Us on<br>Twitter</a></p>
+        </li>
+       
+        <li>
+            <img src="lnk2.png" width="32" height="32">
+            <p><a href="https://www.linkedin.com/school/mcneese-state-university/mycompany/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+        </li>
+        <li>
+            <img src="yu.png" width="32" height="32">
+            <p><a href="https://www.youtube.com/channel/UCN5RmimWLJQNBf-SCQpQoCg" target="_blank">Subscribe on<br>YouYube</a></p>
+        </li>
+        
+<li>
+            <img src="insta2.jpeg" width="32" height="32">
+            <p><a href= "https://www.instagram.com/mcneese/?hl=en"target="_blank">Subscribe on<br>YouYube</a></p>
+        </li>
+    </ul>
+</div>
+
+<style>
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    top:240px;
+    width:250px;
+    z-index: 1100;
+    Background-color:red;
+}
+.sticky li{
+    list-style-type:none;
+    Background-color:#FFFF ;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:13.5px;
+}
+.sticky li p a{
+    text-decoration:none;
+    Color:black;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
+}
+</style>

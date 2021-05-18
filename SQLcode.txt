@@ -1,0 +1,28 @@
+CREATE TABLE Subject (
+	pk_CRN INT NOT NULL,
+	subject_dept CHAR(4) NOT NULL,
+	subject_course_num INT NOT NULL,
+	subject_course_name VARCHAR(50) NOT NULL,
+	subject_prof VARCHAR(50) NOT NULL,
+	PRIMARY KEY (pk_CRN)
+);
+
+CREATE TABLE BookList (
+	pk_ISBN CHAR(13) NOT NULL,
+	book_title VARCHAR(100) NOT NULL,
+	book_author VARCHAR(50) NOT NULL,
+	qty_in_stock INT NOT NULL,
+	book_price MONEY NOT NULL,
+	fk_subject VARCHAR(50) NOT NULL,
+	img_file_path VARCHAR(250),
+	PRIMARY KEY (pk_ISBN)
+	FOREIGN KEY fk_BookList_to_Subject (fk_subject) REFERENCES Subject(pk_CRN)
+);
+
+----Example of an INSERT:-----
+INSERT INTO BookList (pk_ISBN, book_title, book_author, qty_in_stock, book_price, fk_subject, img_file_path)
+VALUES (1305984024583, 'The Illiad', 'Homer', 12, 35.99, 'English', 'C/Users/Name_of_Computer_Owner/Desktop/img.jpeg');
+
+INSERT INTO Subject (pk_CRN, subject_dept, subject_course_num, subject_course_name, subject_prof)
+VALUES (57093, 'CSCI', 413, 'Software Engineering II', 'Dr. Bei Xie', );
+
